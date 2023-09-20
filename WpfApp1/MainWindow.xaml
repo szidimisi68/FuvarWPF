@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="lbFuvarokSzama" FontSize="20" Grid.ColumnSpan="2">Feljegyzett fuvarok száma: </Label>
+        <ComboBox x:Name="cbAzonositok" Grid.Row="1" Width="140" Height="25" ></ComboBox>
+        <Button x:Name="btnLekerdez" Grid.Column="1" Grid.Row="1" Width="120" Height="30" Click="btnLekerdez_Click">Lekérés</Button>
+        <Label x:Name="lbLekertFuvarBevetel" FontSize="20" Grid.ColumnSpan="2" Grid.Row="2">Bevétele:</Label>
+        <Label x:Name="lbLekertFuvarSzama" FontSize="20" Grid.ColumnSpan="2" Grid.Row="3">fuvarok száma:</Label>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2">
+            <Label FontSize="20">Fizetési módok:</Label>
+            <ListBox x:Name="lbFizetesiModok" FontSize="16" Width="200" Margin="-120 10 0 10"></ListBox>
+        </StackPanel>
+
+        <Label x:Name="lbMegtettKm" FontSize="20" Grid.ColumnSpan="2" Grid.Column="2">Összesített megtett út: </Label>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2">
+            <Label FontSize="20">Lehosszabb megtett út adatai:</Label>
+            <ListBox x:Name="lbLeghosszabbMegtettUt" FontSize="16" Width="300" Margin="-120 10 0 10"></ListBox>
+        </StackPanel>
+    </Grid>
+</Window>
